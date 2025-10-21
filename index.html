@@ -1,8 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <script type="module" src="script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shared Bookmarks</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <h1>Shared Bookmarks</h1>
+
+    <label for="user-select">Select User:</label>
+    <select id="user-select">
+      <option value="">-- Select a user --</option>
+      <!-- Users added dynamically -->
+    </select>
+    <form id="bookmark-form">
+      <label for="title">Title:</label>
+      <input type="text" id="title" placeholder="Enter title" />
+
+      <label for="url">URL:</label>
+      <input type="text" id="url" placeholder="https://example.com" />
+
+      <label for="description">Description:</label>
+      <textarea id="description" placeholder="Short description"></textarea>
+
+      <button type="submit">Add Bookmark</button>
+    </form>
+
+    <h2>Saved Bookmarks</h2>
+    <ul id="results-list" aria-live="polite"></ul>
+
+    <script type="module" src="script.js"></script>
   </body>
 </html>
